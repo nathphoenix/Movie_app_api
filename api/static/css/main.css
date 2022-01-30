@@ -1,0 +1,236 @@
+/* This is my CSS file */
+
+.my-sidebar{
+    margin-top:20px;
+}
+
+.body {
+    margin: 0 auto;
+	width: 70%;
+	clear: both;
+}
+
+.mainheader img {
+    width: 30%;
+	height: auto;
+	margin: 2% 0;
+}
+
+.mainheader nav {
+    background-color: #0F5773;
+    margin-top:135px;
+    margin-left:-40px;
+    width:960px;
+    height: 40px;
+}
+
+.mainheader nav ul {
+    list-style: none;
+	margin: 0 auto;
+}
+
+.mainheader nav ul li {
+    float: left;
+	display: inline;
+	border-left:1px solid #155C7A;
+	border-right:1px solid #155C7A;
+}
+.mainheader nav ul li  a{
+    text-decoration:none;
+}
+.mainheader nav a:link, .mainheader nav a:visited {
+    color: #FFF;
+	display: inline-block;
+	padding: 20px 20px;
+	height: 20px;
+}
+
+.mainheader nav a:hover, .mainheader nav a:active,
+.mainheader nav .active a:link, .mainheader nav .active a:visited{
+    background-color: #0F8065;
+	text-shadow: none;
+}
+.mainheader nav li ul a:hover, .mainheader nav li ul a:active,
+.mainheader nav li ul .active li ul a:link, .mainheader navli ul .active li ul a:visited{
+    margin-left:-40px;
+    text-align:center;
+	width:120px;
+	background-color: #FFF;
+    border:4px solid #FFA244;
+	text-shadow: none;
+}
+.mainheader nav ul li a {
+ 
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.mainheader nav li ul{
+            border:1px solid #0F8065;
+            position: absolute;
+	        background-color: #FFF;
+	        display: none;
+        }
+	
+	.mainheader	nav ul li ul li{
+		    text-align: center;
+		    display: table;
+			float: none; 
+			padding: 10px;
+			 border:none;
+		}
+#iconphone{
+    position:absolute;
+    top:15px;
+    left:1050px;   
+}
+#topcustomlogo{ border-bottom:1px solid #0095DA; height: 95px; }
+#topcustomlogo img{ margin-top:15px; }
+#securesignup{ margin-top:50px; margin-left:135px; height:420px; width:735px; border-radius:8px; background:#D9D9D9;}
+#securesignup h1{ border-top:1.5px solid #BCBCBC; border-right:1.5px solid #BCBCBC; border-left:1.5px solid #BCBCBC; font-size:20px; background:#FFF; border-radius:7px; position:absolute; top:142px; left:138px; padding-top:10px; padding-left:20px; width:185px; height:50px;  }
+#techdiff {  background:#FFF; border-bottom:1.5px solid #BCBCBC; border-right:1.5px solid #BCBCBC; border-left:1.5px solid #BCBCBC; 
+height:300px; width:650px;  margin-left:3px; border-radius:7px; }
+#customlogo {
+    position:absolute;
+    top:75px;
+    left:45px;
+}
+#loginbg{
+    background:#85878A;
+    margin-top:162px;
+    height:288px;
+    border-bottom:1px solid #000;
+}
+#loginbg img{padding-left:75px; padding-top:43px;}
+#loginbg form { padding-left:90px; }
+#loginbg div{ color:#FFF; font-size:14px; margin-top:15px; }
+#loginbg form input{ background:#D0D0D2; border:1px solid #000; height:20px; }
+#enrollterms{ color:#FFF; position:absolute; top:280px; left:260px; }
+#enrollterms li a { color:#FFF; text-decoration:none;}
+#bottompix li { list-style:none; float:left; display:inline-block; padding-left:15px; }
+#bottompix{margin-left:20px;}
+#img{ margin-top:-10px; margin-left:1150px; }
+
+/* Processed Page  */
+#myaccounts{ height:400px; margin-top:39px; margin-left:145px;}
+#myaccounts #maketransfer{position:absolute; top:99px; left:589px;}
+#peekview:after{ content:"";
+	position:absolute;
+	width:0px;
+	height:0px;
+	border: 10px solid ;
+	border-color: transparent #D3D3D3 transparent transparent;
+	right:520px;
+	top:75px; }
+
+#peekview #head ul{ list-style:none; }
+#peekview #head ul li{ display:inline-block;  color:#FFF; margin-left:-75px; padding:10px 50px; font-size:11.7px; font-family:Arial Black;}
+#peekview1:after{ content:"";
+	position:absolute;
+	width:0px;
+	height:0px;
+	border: 10px solid ;
+	border-color: transparent #D3D3D3 transparent transparent;
+	right:520px;
+	top:80px; }
+
+#peekview1 #head ul{ list-style:none; }
+#peekview1 #head ul li{ display:inline-block;  color:#FFF; margin-left:-75px; padding:10px 50px; font-size:11.7px; font-family:Arial Black;}
+#peekview2:after{ content:"";
+	position:absolute;
+	width:0px;
+	height:0px;
+	border: 10px solid ;
+	border-color: transparent #D3D3D3 transparent transparent;
+	right:520px;
+	top:120px; }
+
+#peekview2 #head ul{ list-style:none; }
+#peekview2 #head ul li{ display:inline-block;  color:#FFF; margin-left:-75px; padding:10px 50px; font-size:11.7px; font-family:Arial Black;}
+#peekview3:after{ content:"";
+	position:absolute;
+	width:0px;
+	height:0px;
+	border: 10px solid ;
+	border-color: transparent #D3D3D3 transparent transparent;
+	right:520px;
+	top:145px; }
+
+#peekview3 #head ul{ list-style:none; }
+#peekview3 #head ul li{ display:inline-block;  color:#FFF; margin-left:-75px; padding:10px 50px; font-size:11.7px; font-family:Arial Black;}
+#peekview6:after{ content:"";
+	position:absolute;
+	width:0px;
+	height:0px;
+	border: 10px solid ;
+	border-color: transparent #D3D3D3 transparent transparent;
+	right:520px;
+	top:110px; }
+
+#peekview6 #head ul{ list-style:none; }
+#peekview6 #head ul li{ display:inline-block;  color:#FFF; margin-left:-75px; padding:10px 48px; font-size:11.7px; font-family:Arial Black;}
+#peekview7:after{ content:"";
+	position:absolute;
+	width:0px;
+	height:0px;
+	border: 10px solid ;
+	border-color: transparent #D3D3D3 transparent transparent;
+	right:520px;
+	top:90px; }
+
+#peekview7 #head ul{ list-style:none; }
+#peekview7 #head ul li{ display:inline-block;  color:#FFF; margin-left:-75px; padding:10px 48px; font-size:11.7px; font-family:Arial Black;}
+#peekview9:after{ content:"";
+	position:absolute;
+	width:0px;
+	height:0px;
+	border: 10px solid ;
+	border-color: transparent #D3D3D3 transparent transparent;
+	right:520px;
+	top:155px; }
+
+#peekview9 #head ul{ list-style:none; }
+#peekview9 #head ul li{ display:inline-block;  color:#FFF; margin-left:-75px; padding:10px 45px; font-size:11.7px; font-family:Arial Black;}
+#qp a:hover{ border:4px solid #FFA244; padding-bottom:2px; padding-left:3px; padding-right:3px; padding-top:2px; }
+/* account history page */
+#firstcheck {
+        height:470px;
+        width:870px;
+        background:#EBEBEB;
+        margin-top:70px;
+        margin-left:200px;
+        border-radius:7px;
+        
+}
+#accounts { display:none; z-index:4000; }
+#accounts ul{ position:absolute; top:82px; left:390px; background:#FFF; border:2px solid #DCDCDC; list-style:none; width:230px; }
+#accounts ul li a {text-decoration:none; color:#000;}
+#accounts ul li{ font-size:12px; margin-left:-40px; border-bottom:1px dotted gray; padding-top:5px; padding-left:5px; padding-right:10px; padding-bottom:5px; }
+#mainaccinfo { width:860px; height:425px; background:#FFF; position:absolute; top:95px; left:205px; border-radius:5px;}
+#mainaccinfo table tr {background: -webkit-linear-gradient(top,#DFDFDF,#F3F3F3); }
+#mainaccinfo table td {background: #FFF; text-align:center; }
+#mainaccinfo table2 td{ padding-left:-30px; }
+
+
+@media screen and (max-width: 480px) {
+   
+   #loginform {
+      height:150px;
+   }
+   
+      #loginform input{
+        width:80px;   
+      }
+       #loginform label{
+        font-size:17px;   
+      }
+        #loginform button {
+        position:relative;  
+        top:-145px;
+        left:85px; 
+        width:100px;
+      }
+      #loginform button img{
+        height:40px;
+      }
+}
