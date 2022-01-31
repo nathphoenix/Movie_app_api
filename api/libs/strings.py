@@ -6,6 +6,7 @@ By default, uses `en-gb.json` file inside the `strings` top-level folder.
 If language changes, set `libs.strings.default_locale` and run `libs.strings.refresh()`.
 """
 import json
+from pathlib import Path
 
 #now using this to handle all our error rresponse
 
@@ -14,9 +15,11 @@ cached_strings = {}
 
 
 def refresh(): #it takes the global cached string and open it then load the language json file
+    relative = Path(f"api/strings/{default_locale}.json")
+    json_file = relative.absolute()
     print("Refreshing...")
     global cached_strings
-    with open(f"strings/{default_locale}.json") as f:
+    with open(json_file) as f:
         cached_strings = json.load(f)
 
 
