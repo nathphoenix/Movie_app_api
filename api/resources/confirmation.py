@@ -79,35 +79,29 @@ class ConfirmationByUser(Resource):
         user_json = request.get_json() if request.get_json() else dict(request.form)
         user_json = user_json['email']
         email = user_json
-        #user_data = user_list_schema.load(user_json)
         user = UserModel.find_by_email(user_json)
         print(user)
-        #user = user.confirmation[0]
-        #user = str(user)
         if not user:
             return {"message": gettext("user_not_found")}, 404
         user = user_list_schema.dump(user)
         user_id = user['id']
-
-
 
         user = UserModel.find_by_id(user_id)
         if not user:
             return {"message": gettext("user_not_found")}, 404
 
         try:
-            # find the most current confirmation for the user
-            confirmation = user.most_recent_confirmation  # using property decorator
-            if confirmation: #this render old confirmation link invalid
-                if confirmation.confirmed: # if the confirmation is already confirmed, return already confirmed
+           
+            confirmation = user.most_recent_confirmation  
+            if confirmation:
+                if confirmation.confirmed: 
                     return {"message": gettext("confirmation_already_confirmed")}, 400
-                confirmation.force_to_expire()  #else, force the confirmation to expire with the force_to_expire function
+                confirmation.force_to_expire() 
 
-            new_confirmation = ConfirmationModel(user_id)  # create a new confirmation for that user_id
+            new_confirmation = ConfirmationModel(user_id)  
             new_confirmation.save_to_db()
-            # Does `user` object know the new confirmation by now? Yes.
-            # An excellent example where lazy='dynamic' comes into use.
-            user.send_confirmation_email()  # re-send the confirmation email
+            
+            user.send_confirmation_email() 
             return {"message": gettext("confirmation_resend_successful")}, 201
         except MailGunException as e:
             return {"message": str(e)}, 500

@@ -29,7 +29,7 @@ def create_app():
     Sieve(app)
 
     app.url_map.strict_slashes = False
-    #app.config['JWT_TOKEN_LOCATION'] = ['headers', 'query_string']
+    
     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URI")
     app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
     
@@ -37,8 +37,8 @@ def create_app():
     app.config.from_pyfile("config.default_config.py", silent=True)
     
     app.config.from_envvar(
-        "APPLICATION_SETTINGS" #which is in the .env file
-    )  # override with config.py (APPLICATION_SETTINGS points to config.py)
+        "APPLICATION_SETTINGS" 
+    ) 
 
 
     jwt = JWTManager(app)
@@ -75,7 +75,7 @@ def create_app():
     api.add_resource(Book, '/book')
     api.add_resource(UserLogout, "/logout")
 
-    api.add_resource(Confirmation, "/user_confirm/<string:confirmation_id>")  #this is for the html page
+    api.add_resource(Confirmation, "/user_confirm/<string:confirmation_id>")
     api.add_resource(ConfirmationByUser, "/re_confirmation/user")
     
 
