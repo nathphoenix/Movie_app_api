@@ -6,13 +6,6 @@ from ..libs.mailgun import Mailgun, GoogleMail
 from ..models.confirmation import ConfirmationModel
 
 
-#MAILGUN SMTP
-# MAILGUN_API_KEY = "b6e10edf62abbad31b3b258a0cfc674a-1df6ec32-12e4661b"
-# MAILGUN_DOMAIN = "sandbox34d90c59e46f47fea6769287f3b64536.mailgun.org"
-# #MAILGUN 
-# FROM_EMAIL = 'postmaster@sandbox34d90c59e46f47fea6769287f3b64536.mailgun.org'
-# FROM_TITLE = "Stores Rest API"
-
 UserJSON = Dict[str, Union[int, str]]
 
 

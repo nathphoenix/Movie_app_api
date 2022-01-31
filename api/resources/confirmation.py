@@ -11,8 +11,7 @@ from ..models.user import UserModel
 from ..libs.mailgun import MailGunException
 
 #we are using this to handle all our error response
-from ..libs.strings import gettext   #absolute import is very good when we have several languages,
-                                  #so that we won't be importing all different kinds of languages instead of a particular language
+from ..libs.strings import gettext   
 
 confirmation_schema = ConfirmationSchema()
 user_list_schema = UserListSchema()

@@ -6,16 +6,12 @@ from flask_restful import Api
 from flask_jwt_extended import JWTManager, jwt_required, fresh_jwt_required
 from jinja2 import TemplateNotFound
 from marshmallow import ValidationError
-#flask upload can be use not only for images but some other things also
 from flask_login import logout_user, LoginManager
 from flask_cors import CORS
 from dotenv import load_dotenv
 from sqlalchemy_utils import database_exists, create_database
 from flask_sieve import Sieve
-#from .db import db
-#This ensures the dotenv is loaded first before all our imported files 
- #we have to manually load the .env file now as we have our default_config file
-#which the .env file depends upon
+
 
 from datetime import timedelta
 
@@ -36,12 +32,7 @@ def create_app():
     #app.config['JWT_TOKEN_LOCATION'] = ['headers', 'query_string']
     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URI")
     app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
-    #app.config["JWT_REFRESH_TOKEN_EXPIRES"] = timedelta(days=30)
-
-    #app.config["AWS_DEFAULT_REGION"] = os.environ['AWS_DEFAULT_REGION']
-
-
-    #app.config.from_object("default_config")  # load default configs from default_config.py
+    
     app.config.from_object("config.default_config")
     app.config.from_pyfile("config.default_config.py", silent=True)
     
@@ -57,7 +48,6 @@ def create_app():
 
 
 
-    # This method will check if a token is blacklisted, and will be called automatically when blacklist is enabled
     @jwt.token_in_blacklist_loader
     def check_if_token_in_blacklist(decrypted_token):
         return decrypted_token["jti"] in BLACKLIST
@@ -117,10 +107,6 @@ def create_app():
     return app
 
 app = create_app()
-
-
-
-
 
 
 
