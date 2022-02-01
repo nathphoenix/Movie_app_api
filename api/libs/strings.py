@@ -14,8 +14,7 @@ default_locale = "en-gb"
 cached_strings = {}
 
 
-def refresh(): #it takes the global cached string and open it then load the language json file
-    #file = path(f"strings/{default_locale}.json").abspath()
+def refresh():
     global cached_strings
     try:
         relative = Path(f"api/strings/{default_locale}.json")

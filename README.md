@@ -16,6 +16,8 @@ OR
 APPLICATION HAS BEEN DEPLOYED TO HEROKU, which is accessible through the link below
 https://movieoneapi.herokuapp.com/
 
+TO RUN THE TEST:
+RUN pytest from the application folder and not from the test folder
 
 									API CALLS ON POSTMAN
 
