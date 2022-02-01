@@ -15,12 +15,20 @@ cached_strings = {}
 
 
 def refresh(): #it takes the global cached string and open it then load the language json file
-    relative = Path(f"api/strings/{default_locale}.json")
-    json_file = relative.absolute()
-    print("Refreshing...")
+    #file = path(f"strings/{default_locale}.json").abspath()
     global cached_strings
-    with open(json_file) as f:
-        cached_strings = json.load(f)
+    try:
+        relative = Path(f"api/strings/{default_locale}.json")
+        json_file = relative.absolute()
+        print("Refreshing...")
+        
+        with open(json_file) as f:
+            cached_strings = json.load(f)
+    except:
+        print("Refreshing...")
+        with open(f"strings/{default_locale}.json") as f:
+            cached_strings = json.load(f)
+
 
 
 def gettext(name):
